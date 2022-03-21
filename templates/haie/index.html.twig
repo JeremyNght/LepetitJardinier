@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Haie index{% endblock %}
+
+{% block content %}
+    <h1>Haie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Categorie Id</th>
+                <th>Code</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for haie in haies %}
+            <tr>
+                <td>{{ haie.id }}</td>
+                <td>{{ haie.categorie }}</td>
+                <td>{{ haie.code }}</td>
+                <td>{{ haie.nom }}</td>
+                <td>{{ haie.prix }}</td>
+                <td>
+                    <a href="{{ path('haie_show', {'id': haie.id}) }}">show</a>
+                    <a href="{{ path('haie_edit', {'id': haie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('haie_new') }}">Create new</a>
+{% endblock %}

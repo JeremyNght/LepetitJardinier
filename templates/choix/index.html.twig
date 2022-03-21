@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChoixController!{% endblock %}
+
+{% block content %}
+
+    <form action="{{ path('mesure') }}" method="post">
+
+    <div class="choix">
+
+        <input class="form-check-input" type="radio" name="choix" value="particulier">
+        <label>Particulier</label></p>
+        <input class="form-check-input" type="radio" name="choix" value="entreprise">
+        <label>Entreprise</label></p>
+
+        <select class="form-select" name="client"> aria-label="Default select example" required>
+            <option selected name="client">Sélectioner votre comptre client</option>
+            {% for item in lesClients %}
+                <option value="{{item.getId()}}">
+                    {{item.getNom()}}   {{item.getPrenom()}}
+                </option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <select name="type" id="type" required>
+            <option value="">--Choisir une option--</option>
+            {% for item in mesHaies %}
+                <option value="{{item.getId()}}">
+                    {{item.getNom()}} - {{item.getPrix()}}€
+                </option>
+            {% endfor %}
+        </select>
+        <br/>
+        <br/>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Longeur</span>
+            <input type="text" class="form-control" name="Longeur" placeholder="Entrez la longeur en mètre">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Hauteur</span>
+            <input type="text" class="form-control" name="Hauteur" placeholder="Entrez la hauteur en mètre">
+
+        </div>
+
+        <button class="btn btn-primary btn-lg" type="submit" name="suite">Suite</button>
+    </div>
+    </form>
+{% endblock %}

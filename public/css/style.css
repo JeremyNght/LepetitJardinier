@@ -1,0 +1,53 @@
+body {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #414345);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+h1 {
+    color: greenyellow;
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 80px !important;
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    color: white;
+    margin: 0 auto;
+    max-width: 550px;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.lien {
+    margin-left: 5vh;
+    padding-left: 5vh;
+    font-size: 20px !important;
+}
+
+.choix {
+    padding-left: 5vh;
+    font-size: 25px !important;
+}
+
+.mesure {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.devis {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.haie {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
